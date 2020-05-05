@@ -1,0 +1,24 @@
+.main {
+    display: flex;
+    align-items: flex-end;
+    height: 500px;
+    background-image: url(../../assets/image/top_bg.jpg);
+    border-bottom: 2px solid grey;
+
+    &__request {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        font-size: 25px;
+        color: white;
+    }
+
+//   &__image {
+//     width: 100%;
+//   }
+}
+
+.main__request-text {
+    margin-left: 20px;
+}

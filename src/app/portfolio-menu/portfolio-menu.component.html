@@ -1,0 +1,9 @@
+<div class="card-wrapper">
+  <mat-card class="card" *ngFor="let type of typesOfPhotos">
+    <mat-card-header>
+      <mat-card-title>{{ type.name }}</mat-card-title>
+    </mat-card-header>
+    <img class="card__img" mat-card-image src="../../assets/image/portfolio_promo/{{type.link}}.jpg">
+  </mat-card>
+</div>
+

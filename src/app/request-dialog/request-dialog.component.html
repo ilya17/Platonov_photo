@@ -1,0 +1,38 @@
+<div class="dialog-wrapper">
+  <h1 mat-dialog-mat-dialog-title>{{data.title}}</h1>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <mat-dialog-content class="dialog-wrapper__content">
+      <mat-form-field>
+        <mat-label>Имя</mat-label>
+        <input formControlName="name" matInput required>
+        <mat-error *ngIf="form.controls.name.invalid">{{getErrorMessage(form.controls.name)}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Выберите вид фотосъемки</mat-label>
+        <mat-select formControlName="type" required>
+          <mat-option *ngFor="let type of typeOfPhoto" [value]="type.name">
+            {{type.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Контактный телефон</mat-label>
+        <input formControlName="phone" placeholder="в формате +1(111)111-11-11" mask="+0(000)000-00-00" matInput required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Электронная почта</mat-label>
+        <input formControlName="email" matInput required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Комментарии</mat-label>
+        <textarea matInput formControlName="comment"></textarea>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="dialog-wrapper__buttons">
+      <button mat-button mat-dialog-close (click)="onCancel()">Отменить</button>
+      <button mat-button type="submit()">Оставить завку</button>
+    </mat-dialog-actions>
+  </form>
+</div>
+
+

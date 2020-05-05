@@ -1,0 +1,32 @@
+.navbar {
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    background-color: black;
+    border-bottom: 2px solid gray;
+    opacity: 0.8;
+
+    &__main {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 30px;
+        width: 25%;
+    }
+
+    &__item {
+        margin-left: 30px;
+    }
+
+    &__button {
+        height: 50px;
+        width: 50px;
+        margin-left: 15px;
+    }
+}

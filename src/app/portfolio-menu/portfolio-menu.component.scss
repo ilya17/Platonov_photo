@@ -1,0 +1,23 @@
+.card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: 26%;
+    padding: 16px 16px 0px;
+    margin: 30px 10px;
+    background: black;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+
+    &__img {
+        margin-top: 10px;
+        border-radius: 3%;
+    }
+}

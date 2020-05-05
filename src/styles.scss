@@ -1,4 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0;
+    font-family: ProbaPro, "Helvetica Neue", sans-serif; 
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.navbar {
+    .mat-fab {
+        .mat-button-wrapper {
+            padding: 0px;
+            background: black;
+        }
+    }
+}
+
+.item {
+    cursor: pointer;
+    border-bottom: 1px dashed white;
+    transition: all 0.3s;
+    
+    &:hover {
+        border-bottom: transparent 1px dashed;;
+        transition: all 0.3s;
+    }
+}
+
+.mat-dialog-container {
+    background-color: grey;
+}
+
+
+.success-snackbar {
+    background-color: green;
+    color: white;
+}
+
+.fail-snackbar {
+    background-color: red;
+    color: white;
+}
+
+
+.dialog-wrapper {
+    .mat-select-arrow {
+        color: white;
+    }
+
+    input.mat-input-element  {
+        caret-color: white;
+        color: white;
+    }
+
+    .mat-select-value-text {
+        color: white;
+    }
+
+    .mat-form-field-empty {
+        color: white;
+    }
+
+    .mat-focused .mat-form-field-label {
+        color: white !important;
+    }
+
+    .mat-form-field-underline {
+        background-color: white !important;
+    }
+
+    .mat-form-field-ripple {
+        background-color: white !important;;
+    }
+}
+
+.mat-card-header-text {
+    margin: auto !important;
+}
