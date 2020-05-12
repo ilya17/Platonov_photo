@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TypeOfPhotoService } from '../services/type-of-photo.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private typeOfPhotoService: TypeOfPhotoService
+  ) { }
 
   ngOnInit() {
+    this.typeOfPhotoService.mainPhoto.next('../../assets/image/backgroundPhoto/top_bg.jpg');
   }
 
 }
