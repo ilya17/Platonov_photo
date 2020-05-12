@@ -11,6 +11,16 @@ import { RequestDialogComponent } from './request-dialog/request-dialog.componen
 import { NgxMaskModule } from 'ngx-mask';
 import { PortfolioMenuComponent } from './portfolio-menu/portfolio-menu.component';
 import { CopyrightsComponent } from './copyrights/copyrights.component'
+import { AppRoutingModule } from './app-routing.module';
+import { AgriculturalComponent } from './portfolio-pages/agricultural/agricultural.component';
+import { FoodComponent } from './portfolio-pages/food/food.component';
+import { WhiteComponent } from './portfolio-pages/white/white.component';
+import { ChildComponent } from './portfolio-pages/child/child.component';
+import { ReportageComponent } from './portfolio-pages/reportage/reportage.component';
+import { ObjectComponent } from './portfolio-pages/object/object.component';
+import { SportComponent } from './portfolio-pages/sport/sport.component';
+import { AerialComponent } from './portfolio-pages/aerial/aerial.component';
+import { ArchitectureComponent } from './portfolio-pages/architecture/architecture.component';
 
 @NgModule({
    declarations: [
@@ -21,6 +31,15 @@ import { CopyrightsComponent } from './copyrights/copyrights.component'
       RequestDialogComponent,
       PortfolioMenuComponent,
       CopyrightsComponent,
+      AgriculturalComponent,
+      FoodComponent,
+      WhiteComponent,
+      ChildComponent,
+      ReportageComponent,
+      ObjectComponent,
+      SportComponent,
+      AerialComponent,
+      ArchitectureComponent,
    ],
    entryComponents: [
       RequestDialogComponent,
@@ -30,6 +49,7 @@ import { CopyrightsComponent } from './copyrights/copyrights.component'
       BrowserAnimationsModule,
       SharedModule,
       NgxMaskModule.forRoot(),
+      AppRoutingModule
    ],
    providers: [],
    bootstrap: [

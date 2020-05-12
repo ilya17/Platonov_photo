@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RequestDialogComponent } from '../request-dialog/request-dialog.component';
+import { TypeOfPhotoService } from '../services/type-of-photo.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-image-category',
@@ -8,13 +11,26 @@ import { RequestDialogComponent } from '../request-dialog/request-dialog.compone
   styleUrls: ['./top-image-category.component.scss']
 })
 export class TopImageCategoryComponent implements OnInit {
-  @Input() image: string;
+  public image: string;
+  private destroyed$: Subject<void> = new Subject();
 
   constructor(
+    private typeOfPhotoService: TypeOfPhotoService,
     public dialog: MatDialog
   ) { }
 
   ngOnInit() {
+    this.typeOfPhotoService.mainPhoto
+    .pipe(takeUntil(this.destroyed$))
+    .subscribe(res => {
+      this.image = res;
+      console.log(this.image)
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.destroyed$.next();
+    this.destroyed$.complete()
   }
 
   openDialog() {
