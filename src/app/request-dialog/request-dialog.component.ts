@@ -86,7 +86,7 @@ export class RequestDialogComponent implements OnInit, OnDestroy {
   }
 
   onCancel(): void {
-    this.openSnackBar('Ваша заявка отменена', true)
+    this.openSnackBar('Ваша заявка отменена', false)
   }
 
 }
